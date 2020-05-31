@@ -32,6 +32,7 @@ struct stivale_header header = {
     .framebuffer_width = 0,
     .framebuffer_height = 0,
     .flags = 0,
+    .entry_point = 0
 };
 
 

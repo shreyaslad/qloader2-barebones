@@ -1,4 +1,5 @@
 struct stivale_header {
+	//stack pointer that's going to be loaded
     uint64_t stack;
     // Flags
     // bit 0   0 = text mode,   1 = graphics mode
@@ -6,6 +7,7 @@ struct stivale_header {
     uint16_t framebuffer_width;
     uint16_t framebuffer_height;
     uint16_t framebuffer_bpp;
+	uint64_t entry_point;
 } __attribute__((packed));
 
 struct stivale_module {
@@ -30,5 +32,4 @@ struct stivale_struct {
     uint64_t epoch;
     uint64_t flags;       // bit 0: 1 if booted with BIOS, 0 if booted with UEFI
 } __attribute__((packed));
-
 
